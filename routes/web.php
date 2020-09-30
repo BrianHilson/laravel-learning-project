@@ -26,3 +26,7 @@ Route::get('/test', function() {
 
     return view('test', ['name' => $name]);
 });
+
+Route::get('/posts/{post}', function ($post) {
+    return $post;
+});
