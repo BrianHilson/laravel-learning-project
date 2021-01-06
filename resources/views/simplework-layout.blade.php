@@ -32,10 +32,10 @@ Released   : 20140225
 		<div id="menu">
 			<ul>
 				<li class="{{ Request::path() === 'simplework' ? 'current_page_item' : '' }}"><a href="/simplework" accesskey="1" title="">Homepage</a></li>
-				<li class="{{ Request::path() === 'our-clients' ? 'current_page_item' : '' }}"><a href="" accesskey="2" title="">Our Clients</a></li>
-				<li class="{{ Request::path() === 'about-us' ? 'current_page_item' : '' }}"><a href="/about-us" accesskey="3" title="">About Us</a></li>
-				<li class="{{ Request::path() === 'careers' ? 'current_page_item' : '' }}"><a href="#" accesskey="4" title="">Careers</a></li>
-				<li class="{{ Request::path() === 'contact-us' ? 'current_page_item' : '' }}"><a href="#" accesskey="5" title="">Contact Us</a></li>
+				<li class="{{ Request::path() === 'simplework/our-clients' ? 'current_page_item' : '' }}"><a href="" accesskey="2" title="">Our Clients</a></li>
+				<li class="{{ Request::path() === 'simplework/about-us' ? 'current_page_item' : '' }}"><a href="/simplework/about-us" accesskey="3" title="">About Us</a></li>
+				<li class="{{ Request::is('simplework/articles/*') ? 'current_page_item' : '' }}"><a href="/simplework/articles" accesskey="4" title="">Articles</a></li>
+				<li class="{{ Request::path() === 'simplework/contact-us' ? 'current_page_item' : '' }}"><a href="#" accesskey="5" title="">Contact Us</a></li>
 			</ul>
 		</div>
 	</div>

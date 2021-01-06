@@ -17,8 +17,8 @@
 			<ul class="style1">
                 @foreach ($articles as $index => $article)
 				<li class="{{ $index === 0 ? 'first' : ''}}">
-					<h3>{{ $article->title }}</h3>
-					<p><a href="#">{{ $article->excerpt}}</a></p>
+					<h3><a href="/simplework/articles/{{ $article->id }}">{{ $article->title }}</a></h3>
+					<p>{{ $article->excerpt}}</p>
                 </li>
                 @endforeach
 			</ul>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +20,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Simple work
+
 Route::get('/simplework', function () {
     return view('simplework');
 });
 
-Route::get('/about-us', function () {
+Route::get('/simplework/about-us', function () {
     return view('about-us', [
         'articles' => App\Models\Article::take(3)->latest()->get()
     ]);
 });
 
-Route::get('/contact', function () {
+Route::get('/simplework/contact', function () {
     return view('contact');
 });
+
+Route::get('/simplework/articles', [ArticlesController::class, 'index']);
+
+Route::get('/simplework/articles/{articles}', [ArticlesController::class, 'show']);
+
+// Other stuff
 
 Route::get('/something', function () {
     return ['something' => 'something else'];
